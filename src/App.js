@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const App = () => {
   return (
-    <div className=" ">
+    <div className="bg-yellow-500 ">
       {/* Background Video */}
       <video
         autoPlay
