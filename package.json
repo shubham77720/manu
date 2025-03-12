@@ -1,0 +1,102 @@
+{
+  "name": "vocarya",
+  "main": "main.js",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emoji-mart/data": "^1.2.1",
+    "@emoji-mart/react": "^1.1.1",
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@headlessui/react": "^2.2.0",
+    "animate.css": "^4.1.1",
+    "axios": "^1.7.9",
+    "cra-template": "1.2.0",
+    "date-fns": "^4.1.0",
+    "docx": "^9.2.0",
+    "ffmpeg.js": "^4.2.9003",
+    "file-saver": "^2.0.5",
+    "formik": "^2.4.6",
+    "framer-motion": "^11.17.0",
+    "fs": "^0.0.1-security",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.0",
+    "lottie-react": "^2.4.1",
+    "lucide-react": "^0.475.0",
+    "peerjs": "^1.5.4",
+    "react": "^18.3.1",
+    "react-color": "^2.19.3",
+    "react-dom": "^18.3.1",
+    "react-draggable": "^4.4.6",
+    "react-easy-crop": "^5.2.0",
+    "react-icons": "^5.4.0",
+    "react-player": "^2.16.0",
+    "react-router-dom": "^7.1.1",
+    "react-scripts": "5.0.1",
+    "react-swipeable": "^7.0.2",
+    "react-video-js-player": "^1.1.1",
+    "socket.io-client": "^4.8.1",
+    "soundcloud-widget": "^0.2.1",
+    "util": "^0.12.5",
+    "video.js": "^8.21.0",
+    "videojs-record": "^4.8.0",
+    "web-vitals": "^4.2.4",
+    "yup": "^1.6.1"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start": "concurrently \"react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron": "electron .",
+    "package": "electron-builder",
+    "package-win": "electron-builder --win",
+    "package-mac": "electron-builder --mac"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-is-dev": "^3.0.1",
+    "postcss": "^8.5.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "build": {
+    "appId": "com.vocarya.app",
+    "productName": "Vocarya",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "main.js"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "public/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "public/icon.icns"
+    }
+  }
+}
